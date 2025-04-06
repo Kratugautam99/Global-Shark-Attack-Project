@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html lang="en" class="hydrated"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Shark Attack Warner</title>
+    <link rel="stylesheet" href="./static/style.css">
+<script src="chrome-extension://ajjhfmcoicneeegkmgdpnemblemdcebf/sqrx-email-notifier/sqrx-email-notifier.esm.js" type="module" data-resources-url="chrome-extension://ajjhfmcoicneeegkmgdpnemblemdcebf/sqrx-email-notifier/" data-stencil-namespace="sqrx-email-notifier" id="sqrx-email-notifier"></script><script src="chrome-extension://ajjhfmcoicneeegkmgdpnemblemdcebf/sqrx-dialog/sqrx-dialog.esm.js" type="module" data-resources-url="chrome-extension://ajjhfmcoicneeegkmgdpnemblemdcebf/sqrx-dialog/" data-stencil-namespace="sqrx-dialog" id="sqrx-dialog"></script><script src="chrome-extension://ajjhfmcoicneeegkmgdpnemblemdcebf/sqrx-notification-bar/sqrx-notification-bar.esm.js" type="module" data-resources-url="chrome-extension://ajjhfmcoicneeegkmgdpnemblemdcebf/sqrx-notification-bar/" data-stencil-namespace="sqrx-notification-bar" id="sqrx-notification-bar"></script></head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Global Shark Attack Warner</h1>
+            <p class="tagline">Check your risk of shark attack based on your activity and location</p>
+        </header>
+        
+        <div class="form-container">
+            <form method="post" id="prediction-form">
+                <div class="form-group">
+                    <label for="type">Attack Type:</label>
+                    <select name="type" id="type">
+                        <option value="Unprovoked">Unprovoked</option>
+                        <option value="Invalid">Invalid</option>
+                        <option value="Provoked">Provoked</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity">Activity:</label>
+                    <select name="activity" id="activity">
+                        <option value="Boating/Boarding">Boating/Boarding</option>
+                        <option value="Swimming/Wading">Swimming/Wading</option>
+                        <option value="Fishing/Hunting">Fishing/Hunting</option>
+                        <option value="Playing/Walking">Playing/Walking</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select name="country" id="country">
+                        <option value="Australia">Australia</option>
+                        <option value="United States Of America">United States Of America</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="France">France</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Egypt">Egypt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="time_phase">Time of Day:</label>
+                    <select name="time_phase" id="time_phase">
+                        <option value="1">Morning</option>
+                        <option value="2">Afternoon</option>
+                        <option value="3">Evening</option>
+                        <option value="4">Night</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="species">Shark Species:</label>
+                    <select name="species" id="species">
+                        <option value="White Shark">White Shark</option>
+                        <option value="Unknown">Unknown</option>
+                        <option value="Bull Shark">Bull Shark</option>
+                        <option value="Nurse Shark">Nurse Shark</option>
+                        <option value="Small Shark">Small Shark</option>
+                        <option value="Wobbegong Shark">Wobbegong Shark</option>
+                        <option value="Tiger Shark">Tiger Shark</option>
+                        <option value="Spinner Shark">Spinner Shark</option>
+                        <option value="Juvenile Shark">Juvenile Shark</option>
+                        <option value="Blacktip Shark">Blacktip Shark</option>
+                        <option value="Leucas Shark">Leucas Shark</option>
+                        <option value="Blue Shark">Blue Shark</option>
+                        <option value="Mako Shark">Mako Shark</option>
+                        <option value="Dusky Shark">Dusky Shark</option>
+                        <option value="Hammerhead Shark">Hammerhead Shark</option>
+                        <option value="Bronze Shark">Bronze Shark</option>
+                        <option value="Grey Shark">Grey Shark</option>
+                        <option value="Shovelnose Shark">Shovelnose Shark</option>
+                        <option value="Galapagos Shark">Galapagos Shark</option>
+                        <option value="Caribbean Shark">Caribbean Shark</option>
+                        <option value="Limbatus Shark">Limbatus Shark</option>
+                        <option value="Lemon Shark">Lemon Shark</option>
+                        <option value="Sand Shark">Sand Shark</option>
+                        <option value="Zambezi Shark">Zambezi Shark</option>
+                        <option value="Gummy Shark">Gummy Shark</option>
+                        <option value="Reef Shark">Reef Shark</option>
+                        <option value="Banjo Shark">Banjo Shark</option>
+                        <option value="Epaulette Shark">Epaulette Shark</option>
+                        <option value="Angel Shark">Angel Shark</option>
+                        <option value="Barracuda">Barracuda</option>
+                        <option value="Dogfish Shark">Dogfish Shark</option>
+                        <option value="Thresher Shark">Thresher Shark</option>
+                        <option value="Copper Shark">Copper Shark</option>
+                        <option value="Whaler Shark">Whaler Shark</option>
+                        <option value="Salmon Shark">Salmon Shark</option>
+                        <option value="Cow Shark">Cow Shark</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="predict-btn">Predict Risk</button>
+            </form>
+        </div>
+        
+        <div class="result-container" id="result-container" style="display: none;">
+            <h2>Risk Prediction Result</h2>
+            <div class="prediction-result" id="prediction-result"></div>
+        </div>
+    </div>
+
+    <div class="shark-images">
+        <img src="./app_files/shark1.png" class="shark shark1" alt="Shark Silhouette">
+        <img src="./app_files/shark2.png" class="shark shark2" alt="Shark Silhouette">
+    </div>
+    
+    <!-- Modal popup for same input warning -->
+    <div id="input-warning-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Same Input Detected</h2>
+            <p>You are trying to predict with the same inputs as before. Please change at least one option to get a different result.</p>
+            <button id="modal-ok-button" class="modal-button">OK</button>
+        </div>
+    </div>
+    
+    <script>
+        // Store previous inputs
+        let previousInputs = null;
+        
+        // Function to get current form data as string
+        function getFormDataString() {
+            const form = document.getElementById('prediction-form');
+            const formData = new FormData(form);
+            let dataString = '';
+            
+            for (const [key, value] of formData.entries()) {
+                dataString += `${key}=${value}&`;
+            }
+            
+            return dataString;
+        }
+        
+        // Modal functions
+        function showModal() {
+            document.getElementById('input-warning-modal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('input-warning-modal').style.display = 'none';
+        }
+        
+        // Close modal events
+        document.querySelector('.close-button').addEventListener('click', closeModal);
+        document.getElementById('modal-ok-button').addEventListener('click', closeModal);
+        window.addEventListener('click', function(event) {
+            if (event.target === document.getElementById('input-warning-modal')) {
+                closeModal();
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('prediction-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Check for same inputs
+            const currentFormData = getFormDataString();
+            if (previousInputs === currentFormData) {
+                showModal();
+                return;
+            }
+            
+            // Save current inputs
+            previousInputs = currentFormData;
+            
+            // Show loading state
+            const resultContainer = document.getElementById('result-container');
+            resultContainer.style.display = 'block';
+            resultContainer.innerHTML = '<h2>Processing...</h2><div class="loading-spinner"></div>';
+            
+            // Submit form
+            fetch('/', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display prediction or error
+                if (data.error) {
+                    resultContainer.innerHTML = `
+                        <h2>Error</h2>
+                        <div class="error-message">
+                            <p>${data.error}</p>
+                        </div>
+                    `;
+                } else {
+                    const resultClass = data.prediction === 'Yes' ? 'high-risk' : 'low-risk';
+                    resultContainer.innerHTML = `
+                        <h2>Risk Prediction Result</h2>
+                        <div class="prediction-result ${resultClass}">${data.prediction}</div>
+                    `;
+                }
+            })
+            .catch(error => {
+                resultContainer.innerHTML = `
+                    <h2>Error</h2>
+                    <div class="error-message">
+                        <p>Failed to get prediction. Please try again.</p>
+                    </div>
+                `;
+            });
+        });
+    </script>
+
+ <div id="sqrx-content-container"><div class="squarex_ext_modal"><div class="squarex_ext_dialog-container"><div id="module_dialog_root__disposableFileViewer"><div class="squarex_ext_dialog squarex_ext_light squarex_ext__hidden"></div></div></div></div></div></body></html>
