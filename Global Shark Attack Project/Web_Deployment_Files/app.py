@@ -6,7 +6,7 @@ import numpy as np
 import hashlib
 app = Flask(__name__)
 
-model_path = 'C:/Users/user/Downloads/Global Shark Attack Project/Dataset_and_Model/Global_Shark_Attack.joblib'
+model_path = 'C:/Users/user/Downloads/Projects/Global Shark Attack Project/Dataset_and_Model/Global_Shark_Attack.joblib'
 
 try:
     model = joblib.load(model_path)
