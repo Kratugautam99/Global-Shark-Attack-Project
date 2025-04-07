@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "builds": [
-    { "src": "Web_Deployment_Files/app.py", "use": "@vercel/python" }],
-  "routes": [
-    { "src": "/(.*)", "dest": "Web_Deployment_Files/app.py" }
-  ]
-}
