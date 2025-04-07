@@ -63,4 +63,9 @@ This web application predicts the risk of shark attacks based on user input such
 
 - To change the color scheme, edit the CSS variables in `static/style.css`.
 - To modify the shark animations, adjust the animation parameters in the CSS.
-- To add more features to the prediction model, update both the HTML form and the Flask application accordingly. 
+- To add more features to the prediction model, update both the HTML form and the Flask application accordingly.
+
+## Deployment
+
+- As it is one of the earliest, end to end project Machine Learning Project, It was decided to deploy it in pythonanywhere.com free account.
+- It is in the format of "https://username.pythonanywhere.com", in my case "https://kratugautam.pythonanyhere.com".
