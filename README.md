@@ -67,5 +67,5 @@ This web application predicts the risk of shark attacks based on user input such
 
 ## Deployment
 
-- As it is one of the earliest, end to end project Machine Learning Project, It was decided to deploy it in pythonanywhere.com free account.
-- It is in the format of "https://username.pythonanywhere.com", in my case "https://kratugautam.pythonanyhere.com".
+- As it is my one of the earliest, end to end project Machine Learning Project, It was decided to deploy it in pythonanywhere.com free account.
+- It is in the format of "[https://username.pythonanywhere.com]", in my case "https://kratugautam.pythonanyhere.com".
