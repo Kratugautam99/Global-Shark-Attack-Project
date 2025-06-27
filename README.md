@@ -1,71 +1,119 @@
-PROJECT NO.1
-# Global Shark Attack Warner
+# 🌊 Global Shark Attack Warner
 
-This web application predicts the risk of shark attacks based on user input such as activity, shark species, time of day, attack type, and country.
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Setup Instructions
+> A fun, interactive Flask app that predicts shark-attack risk based on user inputs: activity, shark species, time of day, attack type, and location.
 
-1. **Install Required Libraries**:
+---
+## 📖 Table of Contents
+
+- [✨ Features](#-features)  
+- [⚙️ Setup & Installation](#-setup--installation)  
+- [🖼️ Preparing Assets](#-preparing-assets)  
+- [🚀 Running the App](#-running-the-app)  
+- [🖥️ Usage Guide](#-usage-guide)  
+- [🐞 Troubleshooting](#-troubleshooting)  
+- [🎨 Customization](#-customization)  
+- [🌐 Deployment](#-deployment)  
+- [📜 License](#-license)  
+
+---
+## ✨ Features
+
+- 🦈 **Risk Prediction**  
+  – Classifies “High” or “Low” shark-attack risk using your selections.  
+- 🎛️ **Interactive UI**  
+  – Simple dropdowns for Attack Type, Activity, Country, Time of Day, and Shark Species.  
+- 🎨 **Animated Background**  
+  – Beach scene with moving shark sprites for immersive UX.  
+- 🚀 **Lightweight & Fast**  
+  – Minimal dependencies, instant Flask startup.  
+
+---
+<a id="-setup--installation"></a>
+## ⚙️ Setup & Installation
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/Kratugautam99/Global-Shark-Attack-Project.git
+   cd Global-Shark-Attack-Project
+   ```
+
+2. **Create a virtual environment**  
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies**  
    ```bash
    pip install flask joblib numpy pandas scikit-learn
    ```
 
-2. **Prepare Background Image**:
-   - Save a beach image as `background.jpg` in the `static` folder.
-   - The image should have a beach scene preferably with an ocean view.
+---
+<a id="-preparing-assets"></a>
+## 🖼️ Preparing Assets
 
-3. **Create Shark Images**:
-   - Open `static/create_shark_images.html` in a web browser.
-   - Right-click on each shark image and select "Save Image As...".
-   - Save them as `shark1.png` and `shark2.png` in the `static` folder.
+1. **Background Image**  
+   - Place a beach scene as `static/background.jpg`.  
+2. **Shark Sprites**  
+   - Open `static/create_shark_images.html` in your browser.  
+   - Right-click each shark and **Save As** `shark1.png`, `shark2.png` into `static/`.  
 
-4. **Set Up the Model**:
-   - Ensure your trained model is saved as `Global_Shark_Attack.joblib` in a folder named `model` at the same level as the `Web_Deployment_Files` folder.
-   - Alternatively, update the `model_path` in `app.py` to point to your model file.
+---
+## 🚀 Running the App
 
-## Running the Application
+```bash
+cd Web_Deployment_Files
+python app.py
+```
 
-1. Navigate to the Web_Deployment_Files directory:
-   ```bash
-   cd Web_Deployment_Files
-   ```
+Then open your browser at:  
+```
+http://127.0.0.1:5000/
+```
 
-2. Start the Flask application:
-   ```bash
-   python app.py
-   ```
+---
+<a id="-usage-guide"></a>
+## 🖥️ Usage Guide
 
-3. Open your web browser and go to:
-   ```
-   http://127.0.0.1:5000/
-   ```
+1. **Select Options**  
+   - **Attack Type**: Provoked / Unprovoked  
+   - **Activity**: Boating, Swimming, Surfing, etc.  
+   - **Country**: Location of the incident  
+   - **Time of Day**: Dawn, Day, Dusk, Night  
+   - **Shark Species**: e.g., Great White, Tiger, Bull  
 
-## Using the Application
+2. **Predict**  
+   - Click **Predict Risk**  
+   - View result: **High Risk** (“Yes”) or **Low Risk** (“No”)
 
-1. Select values from each dropdown:
-   - Attack Type (Provoked/Unprovoked)
-   - Activity (Boating/Boarding, Swimming/Wading, etc.)
-   - Country
-   - Time of Day
-   - Shark Species
+---
+## 🐞 Troubleshooting
 
-2. Click the "Predict Risk" button to see if there's a risk of a shark attack based on your selections.
+- ❌ _Model load error?_  
+  • Check that `model/Global_Shark_Attack.joblib` exists or update `model_path` in `app.py`.  
+- ❌ _Missing images?_  
+  • Verify `background.jpg`, `shark1.png`, and `shark2.png` are in `static/`.  
+- ❌ _Flask crashes?_  
+  • Review terminal logs and confirm all Python packages are installed.  
 
-3. The result will be displayed as "Yes" (high risk) or "No" (low risk).
+---
+## 🎨 Customization
 
-## Troubleshooting
+- **Color Scheme**: Edit CSS variables in `static/style.css`.  
+- **Animations**: Tweak `@keyframes` in your styles to change shark speed or direction.  
+- **Model Features**:  
+  – Expand the form in `templates/index.html` and adjust `app.py` to read new inputs.  
 
-- If you encounter an error loading the model, ensure the path is correct in `app.py`.
-- If the animations or styling doesn't appear correctly, check that all static files are in the correct location.
-- For any Flask errors, check the terminal for error messages.
+---
+## 🌐 Deployment
 
-## Customization
+This project lives on PythonAnywhere:
 
-- To change the color scheme, edit the CSS variables in `static/style.css`.
-- To modify the shark animations, adjust the animation parameters in the CSS.
-- To add more features to the prediction model, update both the HTML form and the Flask application accordingly.
+> https://kratugautam.pythonanywhere.com
 
-## Deployment
+---
+## 📜 License
 
-- As it is my one of the earliest, end to end project Machine Learning Project, It was decided to deploy it in pythonanywhere.com free account.
-- It is in the format of "[https://username.pythonanywhere.com]", in my case "[https://kratugautam.pythonanywhere.com]".
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for full details.  
