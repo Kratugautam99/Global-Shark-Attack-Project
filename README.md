@@ -109,9 +109,9 @@ http://127.0.0.1:5000/
 ---
 ## 🌐 Deployment
 
-This project lives on PythonAnywhere:
+This project is deployed as Docker Image on DockerHub:
 
-> https://kratugautam.pythonanywhere.com
+> https://hub.docker.com/r/kratuzen/global-shark-attack-project
 
 ---
 ## 📜 License
