@@ -6,7 +6,9 @@ import numpy as np
 import hashlib
 app = Flask(__name__)
 
-model_path = 'C:/Users/user/Downloads/Projects/Global Shark Attack Project/Dataset_and_Model/Global_Shark_Attack.joblib'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "..", "Dataset_and_Model", "Global_Shark_Attack.joblib")
+model_path = os.path.abspath(model_path)
 
 try:
     model = joblib.load(model_path)
@@ -66,4 +68,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(host="0.0.0.0", port=5000, debug=True)
