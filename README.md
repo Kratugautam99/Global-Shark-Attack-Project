@@ -1,6 +1,6 @@
 # 🌊 Global Shark Attack Warner
 
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > A fun, interactive Flask app that predicts shark-attack risk based on user inputs: activity, shark species, time of day, attack type, and location.
 
