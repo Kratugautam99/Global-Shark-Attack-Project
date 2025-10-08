@@ -1,13 +1,21 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kratugautam99/Global-Shark-Attack-Project/refs/heads/main/Web_Deployment_Files/static/shark-icon.png" alt="Shark Icon" width="150"/>
+</p>
+
 # 🌊 Global Shark Attack Warner
 
-[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> A fun, interactive Flask app that predicts shark-attack risk based on user inputs: activity, shark species, time of day, attack type, and location.
+> An engaging, interactive Flask application that predicts shark‑attack risk based on user inputs such as **activity, shark species, time of day, attack type, and location**.  
+> Designed to be lightweight, fast, and visually immersive, it blends machine learning with a playful UI to make risk prediction both informative and fun.
 
 ---
+
 ## 📖 Table of Contents
 
 - [✨ Features](#-features)  
+- [📸 Demo Screenshots](#-dem)  
 - [⚙️ Setup & Installation](#-setup--installation)  
 - [🖼️ Preparing Assets](#-preparing-assets)  
 - [🚀 Running the App](#-running-the-app)  
@@ -18,22 +26,61 @@
 - [📜 License](#-license)  
 
 ---
+
 ## ✨ Features
 
 - 🦈 **Risk Prediction**  
-  – Classifies “High” or “Low” shark-attack risk using your selections.  
+  Classifies scenarios into **High Risk** or **Low Risk** shark‑attack likelihood, based on your chosen parameters.  
+
 - 🎛️ **Interactive UI**  
-  – Simple dropdowns for Attack Type, Activity, Country, Time of Day, and Shark Species.  
+  Clean dropdown menus for **Attack Type, Activity, Country, Time of Day, and Shark Species**, making it beginner‑friendly and intuitive.  
+
 - 🎨 **Animated Background**  
-  – Beach scene with moving shark sprites for immersive UX.  
+  A beach scene with moving shark sprites creates an immersive, game‑like experience while you interact with the model.  
+
 - 🚀 **Lightweight & Fast**  
-  – Minimal dependencies, instant Flask startup.  
+  Minimal dependencies ensure instant Flask startup and smooth performance across environments.  
 
 ---
+<a id = "-dem"></a>
+## 📸 Demo Screenshots
+
+### 🌐 Site Overview
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kratugautam99/Global-Shark-Attack-Project/main/Demo/SiteView.png" alt="Site View" width="80%" />
+</p>
+The landing page of the application, where users can input details and explore shark attack data.
+
+---
+
+### ✅ Positive Prediction
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kratugautam99/Global-Shark-Attack-Project/main/Demo/PredictionYES.png" alt="Prediction YES" width="60%" />
+</p>
+When the model predicts a **likely shark attack scenario**, the interface clearly highlights the risk.
+
+---
+
+### ❌ Negative Prediction
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kratugautam99/Global-Shark-Attack-Project/main/Demo/PredictionNO.png" alt="Prediction NO" width="60%" />
+</p>
+A safe outcome prediction, showing that the given conditions are unlikely to result in an attack.
+
+---
+
+### ⚠️ Duplicate Input Detection
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kratugautam99/Global-Shark-Attack-Project/main/Demo/SameInputDetected.png" alt="Same Input Detected" width="60%" />
+</p>
+The system prevents redundant queries by detecting repeated inputs, ensuring efficient usage.
+
+---
+
 <a id="-setup--installation"></a>
 ## ⚙️ Setup & Installation
 
-1. **Clone the repo**  
+1. **Clone the repository**  
    ```bash
    git clone https://github.com/Kratugautam99/Global-Shark-Attack-Project.git
    cd Global-Shark-Attack-Project
@@ -47,20 +94,29 @@
 
 3. **Install dependencies**  
    ```bash
-   pip install flask joblib numpy pandas scikit-learn
+   pip install -r requirements.txt
+   ```
+
+4. **Alternative: Conda environment (Recommended)**  
+   ```bash
+   conda env create -f environment.yml
+   conda activate shark-env
    ```
 
 ---
+
 <a id="-preparing-assets"></a>
 ## 🖼️ Preparing Assets
 
 1. **Background Image**  
-   - Place a beach scene as `static/background.jpg`.  
+   Add a beach scene image as `static/background.jpg`.  
+
 2. **Shark Sprites**  
    - Open `static/create_shark_images.html` in your browser.  
-   - Right-click each shark and **Save As** `shark1.png`, `shark2.png` into `static/`.  
+   - Right‑click each shark and **Save As** `shark1.png`, `shark2.png` into the `static/` folder.  
 
 ---
+
 ## 🚀 Running the App
 
 ```bash
@@ -74,6 +130,7 @@ http://127.0.0.1:5000/
 ```
 
 ---
+
 <a id="-usage-guide"></a>
 ## 🖥️ Usage Guide
 
@@ -86,34 +143,48 @@ http://127.0.0.1:5000/
 
 2. **Predict**  
    - Click **Predict Risk**  
-   - View result: **High Risk** (“Yes”) or **Low Risk** (“No”)
+   - Instantly view the result: **High Risk** (“Yes”) or **Low Risk** (“No”).  
 
 ---
+
 ## 🐞 Troubleshooting
 
-- ❌ _Model load error?_  
-  • Check that `model/Global_Shark_Attack.joblib` exists or update `model_path` in `app.py`.  
-- ❌ _Missing images?_  
-  • Verify `background.jpg`, `shark1.png`, and `shark2.png` are in `static/`.  
-- ❌ _Flask crashes?_  
-  • Review terminal logs and confirm all Python packages are installed.  
+- ❌ **Model load error?**  
+  Ensure `model/Global_Shark_Attack.joblib` exists or update `model_path` in `app.py`.  
+
+- ❌ **Missing images?**  
+  Confirm `background.jpg`, `shark1.png`, and `shark2.png` are present in `static/`.  
+
+- ❌ **Flask crashes?**  
+  Check terminal logs and verify all Python packages are installed correctly.  
 
 ---
+
 ## 🎨 Customization
 
-- **Color Scheme**: Edit CSS variables in `static/style.css`.  
-- **Animations**: Tweak `@keyframes` in your styles to change shark speed or direction.  
-- **Model Features**:  
-  – Expand the form in `templates/index.html` and adjust `app.py` to read new inputs.  
+- **Color Scheme**  
+  Modify CSS variables in `static/style.css` to change the theme.  
+
+- **Animations**  
+  Adjust `@keyframes` in the stylesheet to tweak shark speed, direction, or effects.  
+
+- **Model Features**  
+  Expand the form in `templates/index.html` and update `app.py` to handle new inputs or features.  
 
 ---
+
 ## 🌐 Deployment
 
-This project is deployed as Docker Image on DockerHub:
+This project is containerized and available as a Docker image on DockerHub:  
 
-> https://hub.docker.com/r/kratuzen/global-shark-attack-project
+👉 [Global Shark Attack Project on DockerHub](https://hub.docker.com/r/kratuzen/global-shark-attack-project)
 
 ---
+
 ## 📜 License
 
 Distributed under the **MIT License**. See [LICENSE](LICENSE) for full details.  
+
+---
+
+Made with 🧠 by Kratu Gautam
